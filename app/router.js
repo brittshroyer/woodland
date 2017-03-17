@@ -12,8 +12,10 @@ Router.map(function() {
     'orders',
     {Path: '/orders' }
   );
-    //below is shorthand we can use if path matches the name of the template
-  // this.route('orders');
+  //below is shorthand we can use if path matches the name of the template
+// this.route('orders');
+  this.route('order', { path: '/orders/:order_id'});
+
 });
 
 export default Router;
