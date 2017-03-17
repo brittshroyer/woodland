@@ -1,6 +1,6 @@
-{{#each model as |order|}}
-  {{#link-to "order" order}}
-    Order {{order.id}} for {{order.name}}<br>
+{{#each model as |item|}}
+  {{#link-to "order" item}}
+    Order {{item.id}} for {{item.name}}<br>
   {{/link-to}}
 {{/each}}
 <!-- iterate once for EACH item in the collection (model) -->
