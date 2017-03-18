@@ -7,17 +7,15 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route(
-    //user should see the orders template when he navigates to /orders
-    'orders',
-    { Path: '/orders' }
-  );
-  //below is shorthand we can use if path matches the name of the template
-// this.route('orders');
-  this.route('order', { path: '/orders/:id'});
+  //user should see the orders template when he navigates to /orders
+  //nested routes
+  this.route('orders', function(){
+    //the order route inherits the parents route, so the path below does NOT need to include
+    //the prefix of /orders
+   this.route('order', { path: '/:id'});
+  });
   // ember recognizes the colon and the key names-in this case id or name and will produce a URL based on the
-  // corresponding name key name found in the route's model.
-
+  // corresponding key name found in the route's model.
 });
 
 export default Router;

@@ -1,6 +1,8 @@
 {{#each model as |item|}}
-  {{#link-to "order" item}}
+  {{#link-to "orders.order" item}}
     Order {{item.id}} for {{item.name}}<br>
   {{/link-to}}
 {{/each}}
 <!-- iterate once for EACH item in the collection (model) -->
+{{outlet}}
+<!-- the outlet allows for child templates to be displayed -->
