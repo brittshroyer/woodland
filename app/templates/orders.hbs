@@ -1,5 +1,6 @@
 {{#each model as |item|}}
   {{#link-to "orders.order" item}}
+    <!-- passing item to order template -->
     Order {{item.id}} for {{item.name}}<br>
   {{/link-to}}
 {{/each}}
