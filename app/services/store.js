@@ -9,7 +9,7 @@ const products = [
   Product.create({title: 'Sleeping Bag', price: 45, description: '18 ducks were murdered and skinned so you could remain toasty inside of this bag.'}),
   Product.create({title: 'Flashlight', price: 12, description: 'The night is dark and full of terrors. Use this to brighten your night or beat your enemies.'}),
   Product.create({title: 'First-Aid Kit', price: 16, description: 'Buy this if you are a total pussy.'})
-]
+];
 const orders = [
   Order.create({id: '0001', name: 'Tywin Lannister',
     items: [
@@ -38,14 +38,10 @@ const orders = [
 ];
 export default Ember.Service.extend({
   getOrderById(id){
-    const orders = this.getOrders();
     return orders.findBy('id', id);
   },
   getOrders(){
-    return [
-      { id: '6', name: 'Nate'},
-      { id: '10', name: 'David' }
-    ];
+    return orders;
   },
   getProducts(){
     return products;
